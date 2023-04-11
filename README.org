@@ -1,0 +1,29 @@
+* Rime
+鼠须管自用配置
+
+** 使用
+#+begin_src shell
+git clone --recurse-submodules https://github.com/tshu-w/rime-conf.git
+(cd plum && bash rime-install ../plum-package.conf)
+#+end_src
+
+** 准则
+1. 使用 [[https://github.com/rime/plum][東風破]] 安装更新方案
+2. 尽可能在官方输入方案进行修改，而非随意 clone 他人配置
+3. 改动可解偶
+
+** 待办
+- [ ] 配置 patch 化
+  [[https://github.com/riverscn/rime-forge][riverscn/rime-forge: 文正坊 - 中州韵 Rime 输入法私房菜]]
+  [[https://github.com/rime/rime-custom][rime/rime-custom: Rime 自定義配置]]
+- [ ] 中英输入添加空格
+  [[https://github.com/hchunhui/librime-lua/issues/238][怎样实现中英文之间自动加空格 · Issue #238 · hchunhui/librime-lua]]
+- [ ] 音形？
+
+** 参考鸣谢
+- [[https://rime.im/][RIME | 中州韻輸入法引擎]]
+- [[https://github.com/rime/plum][rime/plum: 東風破 /plum/: Rime configuration manager and input schema repository]]
+- [[https://github.com/iDvel/rime-ice][iDvel/rime-ice: Rime 配置：雾凇拼音 - 长期维护的简体词库]]
+- [[https://github.com/LufsX/rime/tree/master][LufsX/rime: Rime（中川韵）朙月拼音与小鹤双拼的自用配置方案]]
+- [[https://github.com/BlindingDark/rime-easy-en][BlindingDark/rime-easy-en: Rime / Easy English 英文输入法]]
+- [[https://github.com/scomper/Rime][scomper/Rime: 鼠须管配置]]

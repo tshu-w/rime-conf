@@ -1,0 +1,60 @@
+# Rime schema
+# encoding: utf-8
+#
+# Inspired From:
+# https://github.com/BlindingDark/rime-easy-en/blob/master/easy_en.schema.yaml
+# https://github.com/tumuyan/rime-melt/blob/master/melt_eng.schema.yaml
+
+schema:
+  schema_id: english
+  name: 英語
+  version: "2023.04.09"
+  author:
+    - Tianshu Wang <wang@tianshu.me>
+  description: |
+    English
+
+switches:
+  - name: ascii_mode
+    reset: 0
+    states: [ On, Off ]
+
+engine:
+  processors:
+    - ascii_composer
+    - recognizer
+    - key_binder
+    - speller
+    - selector
+    - navigator
+    - express_editor
+  segmentors:
+    - ascii_segmentor
+    - matcher
+    - abc_segmentor
+    - fallback_segmentor
+  translators:
+    - table_translator
+  filters:
+    - uniquifier
+
+speller:
+  alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA-_
+  # 將字典按照規則改寫
+  algebra:
+    - "derive/['-_]+//"
+    - derive/^(.+)$/\L$1/
+    - derive/^([a-z].+)$/\U$1/
+    - derive/^([a-z])/\U$1/
+
+translator:
+  dictionary: english
+  enable_sentence: false   # 取消單詞連打功能
+  # comment_format:
+  #   - "xform/^.+$//"         # 取消補全註釋
+
+key_binder:
+  import_preset: default
+
+recognizer:
+  import_preset: default

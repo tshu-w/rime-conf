@@ -1,0 +1,27 @@
+archive/
+build/
+*_dicts/
+*.userdb/
+opencc/
+sync/
+
+# Rime
+installation.yaml
+user.yaml
+*.schema.yaml
+*.dict.yaml
+
+# ℞ prelude https://github.com/rime/rime-prelude
+default.yaml
+key_bindings.yaml
+punctuation.yaml
+symbols.yaml
+
+# ℞ lotem/rime-octagram-data https://github.com/lotem/rime-octagram-data
+grammar.yaml
+*.gram
+
+# Others
+/pinyin.yaml
+/emoji_suggestion.yaml
+!english.*.yaml

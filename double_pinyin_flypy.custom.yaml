@@ -1,0 +1,67 @@
+# double_pinyin_flypy.custom.yaml
+# author: Tianshu Wang <wang@tianshu.me>
+#
+# 儘量避免直接使用 __patch, __include, etc. https://github.com/rime/librime/pull/192#issuecomment-1369422064
+
+patch:
+  schema/dependencies/@next: english
+
+  switches/@2:
+    name: traditionalization
+    states: [ 汉字, 漢字 ]
+
+  engine/translators/+:
+    - "table_translator@custom_phrase"
+    - "table_translator@english"
+    - "lua_translator@date_translator"
+
+  speller/algebra/@next: "abbrev/^(.).+$/$1/"   # 簡拼（首字母）
+  speller/alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA
+
+  translator/dictionary: pinyin_simp            # 載入拼音簡化詞庫
+  translator/preedit_format: []                 # 输入双拼码的时候不转化为全拼码
+
+  punctuator:
+    import_preset: symbols
+    half_shape:
+      "#" : "#"
+      "*" : "*"
+      "=" : "="
+      "[" : "「"
+      "]" : "」"
+      "{" : "『"
+      "}" : "』"
+  recognizer/patterns/punct: '^/([0-9]0?|[A-Za-z]+)$'
+
+  custom_phrase:
+    dictionary: ""
+    user_dict: custom_phrase
+    db_class: stabledb
+    enable_completion: false
+    enable_sentence: false
+    initial_quality: 1
+
+  english:
+    dictionary: english
+    enable_sentence: false
+    enable_user_dict: false
+    initial_quality: 0.5
+
+  simplifier:
+    option_name: traditionalization
+    opencc_config: s2t.json # s2t.json | s2hk.json | s2tw.json | s2twp.json
+    excluded_types: [ reverse_lookup ]
+
+__patch:
+# Rx: emoji:customize:schema=double_pinyin_flypy {
+  - patch/+:
+      __include: patch/emoji_suggestion:/patch
+# }
+# Rx: lotem/rime-octagram-data:customize:schema=double_pinyin_flypy,model=hans {
+  - patch/+:
+      __include: grammar:/hans
+# }
+# # Rx: BlindingDark/rime-lua-select-character:customize:schema=luna_pinyin {
+#   - patch/+:
+#       __include: patch/lua_select_character:/patch
+# # }

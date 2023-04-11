@@ -1,0 +1,13 @@
+patch:
+  schema_list:
+    - schema: double_pinyin_flypy  # 小鹤雙拼
+    - schema: luna_pinyin          # 朙月拼音
+    - schema: english              # 英語
+
+  switcher/save_options/+:
+    - emoji_suggestion
+
+  # 定制每页候选数
+  menu/page_size: 8
+
+
