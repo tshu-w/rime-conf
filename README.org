@@ -13,9 +13,10 @@ git clone --recurse-submodules https://github.com/tshu-w/rime-conf.git
 3. 改动可解偶
 
 ** 待办
-- [ ] 配置 patch 化
+- [ ] 配置 patch & 原子化
   [[https://github.com/riverscn/rime-forge][riverscn/rime-forge: 文正坊 - 中州韵 Rime 输入法私房菜]]
   [[https://github.com/rime/rime-custom][rime/rime-custom: Rime 自定義配置]]
+  [[https://github.com/LawssssCat/rime-aurora][LawssssCat/rime-aurora: 电脑 rime 极光方案（朙月拼音）]]
 - [ ] 中英输入添加空格
   [[https://github.com/hchunhui/librime-lua/issues/238][怎样实现中英文之间自动加空格 · Issue #238 · hchunhui/librime-lua]]
 - [ ] 音形？
