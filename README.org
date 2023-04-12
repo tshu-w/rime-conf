@@ -7,6 +7,12 @@ git clone --recurse-submodules https://github.com/tshu-w/rime-conf.git
 (cd plum && bash rime-install ../plum-package.conf)
 #+end_src
 
+** 特性
+1. 中英混输
+2. 支持 Emoji
+3. 雾凇拼音词典
+4. 日期时间快速输入
+
 ** 准则
 1. 使用 [[https://github.com/rime/plum][東風破]] 安装更新方案
 2. 尽可能在官方输入方案进行修改，而非随意 clone 他人配置
