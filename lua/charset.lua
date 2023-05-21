@@ -69,11 +69,11 @@ local function charset_filter(input)
       -- 如果当前候选项 `cand` 不含 CJK 扩展汉字
       if (not exists(is_cjk_ext, cand.text))
       then
-	 -- 结果中仍保留此候选
-	 yield(cand)
+         -- 结果中仍保留此候选
+         yield(cand)
       end
       --[[ 上述条件不满足时，当前的候选 `cand` 没有被 yield。
-           因此过滤结果中将不含有该候选。
+         因此过滤结果中将不含有该候选。
       --]]
    end
 end
@@ -87,14 +87,14 @@ local function charset_comment_filter(input)
    for cand in input:iter() do
       -- 判断当前候选内容 `cand.text` 中文字属哪个字符集
       for s, r in pairs(charset) do
-	 if (exists(is_charset(s), cand.text)) then
-	    --[[ 修改候选的注释 `cand.comment`
-                 因复杂类型候选项的注释不能被直接修改，
-                 因此使用 `get_genuine()` 得到其对应真实的候选项
+         if (exists(is_charset(s), cand.text)) then
+            --[[ 修改候选的注释 `cand.comment`
+               因复杂类型候选项的注释不能被直接修改，
+               因此使用 `get_genuine()` 得到其对应真实的候选项
             --]]
-	    cand:get_genuine().comment = cand.comment .. " " .. s
-	    break
-	 end
+            cand:get_genuine().comment = cand.comment .. " " .. s
+            break
+         end
       end
       -- 在结果中对应产生一个带注释的候选
       yield(cand)
@@ -103,4 +103,4 @@ end
 
 -- 本例中定义了两个 filter，故使用一个表将两者导出
 return { filter = charset_filter,
-	 comment_filter = charset_comment_filter }
+         comment_filter = charset_comment_filter }
