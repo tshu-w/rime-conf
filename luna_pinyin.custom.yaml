@@ -12,6 +12,9 @@ patch:
     - "table_translator@english"
     - "lua_translator@date_translator"
 
+  engine/filters/+:
+    - "lua_filter@auto_capitalize_filter"
+
   speller/alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA
 
   translator/dictionary: pinyin_simp   # 載入拼音簡化詞庫

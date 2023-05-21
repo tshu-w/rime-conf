@@ -34,3 +34,4 @@ git clone --recurse-submodules https://github.com/tshu-w/rime-conf.git
 - [[https://github.com/LufsX/rime/tree/master][LufsX/rime: Rime（中川韵）朙月拼音与小鹤双拼的自用配置方案]]
 - [[https://github.com/BlindingDark/rime-easy-en][BlindingDark/rime-easy-en: Rime / Easy English 英文输入法]]
 - [[https://github.com/scomper/Rime][scomper/Rime: 鼠须管配置]]
+- [[https://github.com/tumuyan/rime-melt/blob/master/lua/melt.lua#LL110C42-L110C42][rime-melt/melt.lua at master · tumuyan/rime-melt]]

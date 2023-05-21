@@ -12,6 +12,9 @@ local charset = require("charset")
 charset_filter = charset.filter
 charset_comment_filter = charset.comment_filter
 
+-- auto_capitalize_filter: 自动大写候选项
+auto_capitalize_filter = require("auto_capitalize")
+
 -- III. processors:
 
 select_character_processor = require("select_character")
