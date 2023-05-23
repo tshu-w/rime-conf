@@ -24,4 +24,4 @@ grammar.yaml
 # Others
 /pinyin.yaml
 /emoji_suggestion.yaml
-!english.*.yaml
+!english*.yaml
