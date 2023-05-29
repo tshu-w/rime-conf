@@ -6,8 +6,8 @@
 name: english_flypy
 version: "2023-04-10"
 import_tables:
-  - en_dicts/en
-  - en_dicts/en_ext
   - en_dicts/en_custom
+  - en_dicts/en_ext
+  - en_dicts/en
   - en_dicts/cn_en_double_pinyin_flypy
 ...
