@@ -1,12 +1,16 @@
+-- From https://github.com/WithdewHua/rime-configuration/blob/main/Rime/Common/lua/autocap_filter.lua
+
 local function filter(input, env)
    for cand in input:iter() do
       local text = cand.text
-      local commit = env.engine.context.input
-      if (string.find(text, "^%l%l.*") and string.find(commit, "^%u%u.*")) then
-         yield(Candidate("UPPERCASE", 0, string.len(commit), string.upper(text), string.upper(cand.comment)))
-      elseif (string.find(text, "^%l+$") and string.find(commit, "^%u+")) then
-         local suffix = string.sub(text, string.len(commit) + 1)
-         yield(Candidate("Capitalize", 0, string.len(commit), commit .. suffix, cand.comment))
+      local context_input = env.engine.context.input
+      if context_input:find("^%u+") and text:find("^%l+") then
+         if context_input:find("^%u%u.*") then
+            text = text:upper()
+         else
+            text = text:sub(1, 1):upper() .. text:sub(2)
+         end
+         yield(Candidate(cand.type, 0, #context_input, text, cand.comment))
       else
          yield(cand)
       end

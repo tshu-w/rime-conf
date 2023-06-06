@@ -2,7 +2,7 @@
 
 -- I. translators:
 
-date_translator = require("date_translator")
+date_translator = require("datetime")
 
 -- II. filters:
 
