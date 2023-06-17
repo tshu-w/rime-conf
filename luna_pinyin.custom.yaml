@@ -35,7 +35,7 @@ patch:
     dictionary: english_pinyin
     enable_sentence: false
     enable_user_dict: false
-    initial_quality: 0.5
+    initial_quality: -0.5
 
   simplifier:
     option_name: traditionalization
