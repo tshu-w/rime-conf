@@ -47,10 +47,6 @@ __patch:
   - patch/+:
       __include: emoji_suggestion:/patch
 # }
-# Rx: lotem/rime-octagram-data:customize:schema=luna_pinyin,model=hans {
-  - patch/+:
-      __include: grammar:/hans
-# }
 # # Rx: BlindingDark/rime-lua-select-character:customize:schema=luna_pinyin {
 #   - patch/+:
 #       __include: patch/lua_select_character:/patch
