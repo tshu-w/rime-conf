@@ -2,7 +2,7 @@ archive/
 build/
 *_dicts/
 *.userdb/
-opencc/
+opencc/*
 sync/
 
 # Rime
@@ -17,12 +17,11 @@ key_bindings.yaml
 punctuation.yaml
 symbols.yaml
 
-# ℞ lotem/rime-octagram-data https://github.com/lotem/rime-octagram-data
-grammar.yaml
-*.gram
-
 # Others
 /pinyin.yaml
 /emoji_suggestion.yaml
 !pinyin_simp.dict.yaml
 !english*.yaml
+!emoji_custom.json
+!emoji_category_v.txt
+
