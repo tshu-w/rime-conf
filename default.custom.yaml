@@ -5,6 +5,7 @@ patch:
     - schema: english              # 英語
 
   switcher/save_options/+:
+    - traditionalization
     - emoji_suggestion
 
   # 定制每页候选数
