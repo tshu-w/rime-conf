@@ -26,10 +26,6 @@ patch:
       "*" : "*"
       "=" : "="
       "~" : "~"
-      "[" : "「"
-      "]" : "」"
-      "{" : "『"
-      "}" : "』"
 
   english:
     dictionary: english_pinyin
