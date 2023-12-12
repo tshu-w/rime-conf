@@ -8,6 +8,16 @@ patch:
     name: traditionalization
     states: [ 汉字, 漢字 ]
 
+  engine/processors:
+    # - ascii_composer
+    - recognizer
+    - key_binder
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+
   engine/translators/+:
     - "table_translator@english"
     - "lua_translator@date_translator"
