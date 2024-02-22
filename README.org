@@ -26,6 +26,8 @@ git clone --recurse-submodules https://github.com/tshu-w/rime-conf.git
 - [ ] 中英输入添加空格
   [[https://github.com/hchunhui/librime-lua/issues/238][怎样实现中英文之间自动加空格 · Issue #238 · hchunhui/librime-lua]]
 - [ ] 音形？
+- [ ] 更好的英文输入？
+  [[https://github.com/sdadonkey/rime-english/tree/master][sdadonkey/rime-english: Rime English：在西文模式下實現英文單詞輸入]]
 
 ** 参考鸣谢
 - [[https://rime.im/][RIME | 中州韻輸入法引擎]]
