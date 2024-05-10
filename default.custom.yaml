@@ -11,6 +11,29 @@ patch:
   # 定制每页候选数
   menu/page_size: 8
 
+  key_binder:
+    bindings:
+      __patch:
+        - key_bindings:/emacs_editing
+        - key_bindings:/move_by_word_with_tab
+        - key_bindings:/paging_with_minus_equal
+        - key_bindings:/paging_with_comma_period
+        - /numbered_mode_switch
+
   recognizer/patterns:
     email: "^[A-Za-z][-_.0-9A-Za-z]*@.*$"
     url: "^(www[.]|https?:|ftp[.:]|mailto:|file:).*$|^[a-z]+[.].+$"
+
+numbered_mode_switch:
+  __append:
+    - { when: always, accept: Control+Shift+1, select: .next }
+    - { when: always, accept: Control+Shift+2, toggle: '@0' }
+    - { when: always, accept: Control+Shift+3, toggle: '@1' }
+    - { when: always, accept: Control+Shift+4, toggle: '@2' }
+    - { when: always, accept: Control+Shift+5, toggle: '@3' }
+    - { when: always, accept: Control+Shift+6, toggle: '@4' }
+    - { when: always, accept: Control+Shift+exclam, select: .next }
+    - { when: always, accept: Control+Shift+at, toggle: ascii_mode }
+    - { when: always, accept: Control+Shift+numbersign, toggle: full_shape }
+    - { when: always, accept: Control+Shift+dollar, toggle: simplification }
+    - { when: always, accept: Control+Shift+percent, toggle: extended_charset }
