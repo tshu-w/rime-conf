@@ -2,7 +2,7 @@
 # author: Tianshu Wang <wang@tianshu.me>
 
 patch:
-  schema/dependencies/@next: english_pinyin
+  schema/dependencies/@next: english
 
   switches/@2:
     name: traditionalization
@@ -20,6 +20,7 @@ patch:
 
   engine/translators/+:
     - "table_translator@english"
+    - "table_translator@cn_en"
     - "lua_translator@date_translator"
 
   engine/filters/+:
@@ -38,10 +39,20 @@ patch:
       "~" : "~"
 
   english:
-    dictionary: english_pinyin
+    dictionary: english
     enable_sentence: false
     enable_user_dict: false
     initial_quality: -0.5
+
+  cn_en:
+    dictionary: ""
+    user_dict: en_dicts/cn_en
+    db_class: stabledb
+    enable_completion: true
+    enable_sentence: false
+    initial_quality: 0.5
+    comment_format:
+        - xform/^.+$//
 
   simplifier:
     option_name: traditionalization

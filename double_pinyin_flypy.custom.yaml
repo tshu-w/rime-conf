@@ -4,7 +4,7 @@
 # 儘量避免直接使用 __patch, __include, etc. https://github.com/rime/librime/pull/192#issuecomment-1369422064
 
 patch:
-  schema/dependencies/@next: english_flypy
+  schema/dependencies/@next: english
 
   switches/@2:
     name: traditionalization
@@ -23,6 +23,7 @@ patch:
   engine/translators/+:
     - "table_translator@custom_phrase"
     - "table_translator@english"
+    - "table_translator@cn_en"
     - "lua_translator@date_translator"
 
   engine/filters/+:
@@ -52,10 +53,20 @@ patch:
     initial_quality: 1
 
   english:
-    dictionary: english_flypy
+    dictionary: english
     enable_sentence: false
     enable_user_dict: false
     initial_quality: -0.5
+
+  cn_en:
+    dictionary: ""
+    user_dict: en_dicts/cn_en_flypy
+    db_class: stabledb
+    enable_completion: true
+    enable_sentence: false
+    initial_quality: 0.5
+    comment_format:
+        - xform/^.+$//
 
   simplifier:
     option_name: traditionalization

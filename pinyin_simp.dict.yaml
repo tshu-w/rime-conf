@@ -5,14 +5,13 @@
 
 ---
 name: pinyin_simp
-version: "2023.04.10"
+version: "2024.06.01"
 sort: by_weight
 
 import_tables:
   - cn_dicts/8105     # 字表
   # - cn_dicts/41448  # 大字表（按需启用）
   - cn_dicts/base     # 基础词库
-  - cn_dicts/sogou    # 搜狗流行词
   - cn_dicts/ext      # 扩展词库
   - cn_dicts/tencent  # 腾讯词向量（大词库，部署时间较长）
   - cn_dicts/others   # 一些杂项
@@ -80,3 +79,9 @@ Z	Z
 2D电影
 3D电影
 4S店
+AE86
+M1
+M2
+M3
+M4
+M4A1

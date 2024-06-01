@@ -39,13 +39,51 @@ engine:
     - uniquifier
 
 speller:
-  alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA-_
+  alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA
   # 將字典按照規則改寫
   algebra:
-    - "derive/['-_]+//"
-    - derive/^(.+)$/\L$1/
-    - derive/^([a-z].+)$/\U$1/
-    - derive/^([a-z])/\U$1/
+    # 數字
+    - derive/1([4-7|9])/$1teen/
+    - derive/11/eleven/
+    - derive/12/twelve/
+    - derive/13/thirteen/
+    - derive/15/fifteen/
+    - derive/18/eighteen/
+    - derive/0/o/
+    - derive/0/O/
+    - derive/0/zero/
+    - derive/1/one/
+    - derive/10/ten/
+    - derive/2/to/
+    - derive/2/two/
+    - derive/3/three/
+    - derive/4/for/
+    - derive/4/four/
+    - derive/5/five/
+    - derive/6/six/
+    - derive/7/seven/
+    - derive/8/eight/
+    - derive/9/nine/
+    # 符號
+    - derive/\+/plus/
+    - derive/\./dot/
+    - derive/@/at/
+    - derive/-/hyphen/
+    - derive/#/hash/
+    - derive/#/number/
+    - derive/#/sharp/
+    - derive/♯/sharp/
+    - derive / slash
+    - derive/&/and/
+    - derive/%/percent/
+    # 特殊字符
+    - "derive/[.+@'-_]+//"
+    # 僅字母數字
+    - derive/[^a-zA-Z0-9]//
+    # 大小寫
+    - derive/^.+$/\L$0/
+    - derive/^.+$/\U$0/
+    - derive/^./\U$0/
 
 translator:
   dictionary: english
