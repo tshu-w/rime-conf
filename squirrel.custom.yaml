@@ -18,7 +18,7 @@ patch:
     font_point: 16
     label_font_point: 13
     comment_font_point: 14
-    candidate_format: "%c %@"
+    candidate_format: "[label] [candidate] [comment]"
 
   app_options: {}
 
@@ -26,7 +26,7 @@ patch:
     macos_light:
       name: "系统浅色／macOS Light"
       author: Tianshu Wang
-      candidate_format: "%c\u2005%@"
+      candidate_format: "[label] [candidate] [comment]"
       inline_preedit: true
       translucency: true
       corner_radius: 5
@@ -47,7 +47,7 @@ patch:
     macos_dark:
       name: "系统深色／macOS Dark"
       author: Tianshu Wang
-      candidate_format: "%c\u2005%@"
+      candidate_format: "[label] [candidate] [comment]"
       inline_preedit: true
       translucency: true
       corner_radius: 5
@@ -68,7 +68,7 @@ patch:
     wetype_light:
       name: "微信浅色／WeType Light"
       author: Tianshu Wang
-      candidate_format: "%c\u2005%@"
+      candidate_format: "[label] [candidate] [comment]"
       inline_preedit: true
       translucency: true
       corner_radius: 5
@@ -90,7 +90,7 @@ patch:
     wetype_dark:
       name: "微信深色／WeType Dark"
       author: Tianshu Wang
-      candidate_format: "%c\u2005%@"
+      candidate_format: "[label] [candidate] [comment]"
       inline_preedit: true
       translucency: true
       corner_radius: 5
