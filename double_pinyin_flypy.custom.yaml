@@ -34,6 +34,7 @@ patch:
 
   translator/dictionary: pinyin_simp            # 載入拼音簡化詞庫
   translator/preedit_format: []                 # 输入双拼码的时候不转化为全拼码
+  translator/enable_completion: true
 
   punctuator:
     import_preset: symbols
