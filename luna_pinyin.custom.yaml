@@ -21,10 +21,10 @@ patch:
   engine/translators/+:
     - "table_translator@english"
     - "table_translator@cn_en"
-    - "lua_translator@date_translator"
+    - "lua_translator@*date_translator"
 
   engine/filters/+:
-    - "lua_filter@auto_capitalize_filter"
+    - "lua_filter@*auto_capitalize_filter"
 
   speller/alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA
 

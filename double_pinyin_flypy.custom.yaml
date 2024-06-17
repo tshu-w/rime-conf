@@ -24,10 +24,10 @@ patch:
     - "table_translator@custom_phrase"
     - "table_translator@english"
     - "table_translator@cn_en"
-    - "lua_translator@date_translator"
+    - "lua_translator@*date_translator"
 
   engine/filters/+:
-    - "lua_filter@auto_capitalize_filter"
+    - "lua_filter@*auto_capitalize_filter"
 
   speller/algebra/@next: "abbrev/^(.).+$/$1/"   # 簡拼（首字母）
   speller/alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA
