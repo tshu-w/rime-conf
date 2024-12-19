@@ -74,6 +74,15 @@ patch:
     opencc_config: s2t.json # s2t.json | s2hk.json | s2tw.json | s2twp.json
     excluded_types: [ reverse_lookup ]
 
+  grammar:
+    language: amz-v3n2m1-zh-hans
+    collocation_max_length: 5
+    collocation_min_length: 2
+
+  translator/contextual_suggestions: true
+  translator/max_homophones: 7
+  translator/max_homographs: 7
+
 __patch:
 # Rx: emoji:customize:schema=double_pinyin_flypy {
   - patch/+:
