@@ -1,6 +1,6 @@
 -- From https://github.com/WithdewHua/rime-configuration/blob/main/Rime/Common/lua/autocap_filter.lua
 
-local function filter(input, env)
+local function auto_capitalize(input, env)
    for cand in input:iter() do
       local text = cand.text
       local context_input = env.engine.context.input
@@ -17,4 +17,4 @@ local function filter(input, env)
    end
 end
 
-return filter
+return auto_capitalize
