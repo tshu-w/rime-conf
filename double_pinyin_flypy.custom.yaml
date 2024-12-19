@@ -27,6 +27,7 @@ patch:
     - "lua_translator@*date_translator"
 
   engine/filters/+:
+    - "lua_filter@*comment_filter"
     - "lua_filter@*auto_capitalize_filter"
 
   speller/algebra/@next: "abbrev/^(.).+$/$1/"   # 簡拼（首字母）
