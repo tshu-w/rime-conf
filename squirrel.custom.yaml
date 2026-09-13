@@ -4,7 +4,7 @@
 #   - https://www.figma.com/community/file/1166934605535869911/rime
 
 patch:
-  us_keyboard_layout: true
+  keyboard_layout: default
   show_notifications_when: appropriate
   style:
     color_scheme: wetype_light # native

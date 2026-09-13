@@ -23,8 +23,14 @@ patch:
     - "table_translator@cn_en"
     - "lua_translator@*date_translator"
 
-  engine/filters/+:
+  engine/filters:
+    - simplifier
+    - uniquifier
     - "lua_filter@*auto_capitalize_filter"
+
+  key_binder/bindings:
+    - { when: always, accept: Control+Shift+4, toggle: traditionalization }
+    - { when: always, accept: Control+Shift+dollar, toggle: traditionalization }
 
   speller/alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA
 

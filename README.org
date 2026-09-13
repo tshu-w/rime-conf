@@ -18,6 +18,16 @@ git clone --recurse-submodules https://github.com/tshu-w/rime-conf.git
 2. 尽可能在官方输入方案进行修改，而非随意 clone 他人配置
 3. 改动可解偶
 
+** 兼容说明
+- 朙月拼音使用雾凇简体词库，通过 =traditionalization= 开关控制是否转为繁体。
+  自定义补丁将上游转换过滤器替换为 =simplifier=，使用 =s2t.json= 简转繁；
+  修改过滤器列表时需保留 Emoji 补丁和 Lua 过滤器。
+- 朙月拼音 0.31 将繁简快捷键绑定到 =zh_hans=，因此在方案补丁中将
+  =Control+Shift+4= 和 =Control+Shift+dollar= 都改为切换 =traditionalization=。
+  全局 =Control+Shift+dollar= 同样使用此开关，移除无对应开关的 =extended_charset= 绑定。
+- 鼠须管使用 =keyboard_layout: default= 固定 ABC 键盘布局，替代已失效的
+  =us_keyboard_layout: true=。
+
 ** 待办
 - [ ] 配置 patch & 原子化
   [[https://github.com/riverscn/rime-forge][riverscn/rime-forge: 文正坊 - 中州韵 Rime 输入法私房菜]]

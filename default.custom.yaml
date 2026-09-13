@@ -35,5 +35,4 @@ numbered_mode_switch:
     - { when: always, accept: Control+Shift+exclam, select: .next }
     - { when: always, accept: Control+Shift+at, toggle: ascii_mode }
     - { when: always, accept: Control+Shift+numbersign, toggle: full_shape }
-    - { when: always, accept: Control+Shift+dollar, toggle: simplification }
-    - { when: always, accept: Control+Shift+percent, toggle: extended_charset }
+    - { when: always, accept: Control+Shift+dollar, toggle: traditionalization }
